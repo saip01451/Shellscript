@@ -1,0 +1,10 @@
+#!/bin/bash
+
+PERSON1=SAI
+PERSON2=KRISHNA
+PERSON3=DADY
+
+echo"$PERSON1: Hai $PERSON2"
+echo"$PERSON2: Hai $PERSON1"
+echo"$PERSON3: Where are you"
+echo'$PERSON1: OK"
