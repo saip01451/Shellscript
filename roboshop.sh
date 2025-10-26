@@ -31,7 +31,7 @@ do
             "Name"              : "'$!'.'$DOMAIN_NAME'"
             ,"Type"             : "A"
             ,"TTL"              : 1
-            ,"Resource Records" : [{
+            ,"ResourceRecords" : [{
                 "Value"         : "'$IP_ADDRESS'"
             }]
         }
