@@ -22,19 +22,20 @@ do
     #create Route53 record make sure you delete existing record
     aws route53 change-resource -record -record-sets \
     --hosted-zone-id $ZONE_ID \
-    --change-batch
-
+    --change-batch '
     {
         "Comment":"creating a record set for cognito endpoint"
         ,"Changes":[{
-        ,"Action" : ""CREATE"
-        ,"Resource Recordset":{
-            "Name"  : "'$!'.'$DOMAIN_NAME'"
-            "Type"  : "A"
-            ,"TTL"  : 1
+        ,"Action"               : ""CREATE"
+        ,"Resource Recordset"   :{
+            "Name"              : "'$!'.'$DOMAIN_NAME'"
+            "Type"              : "A"
+            ,"TTL"              : 1
             ,"Resource Records" : [{
-                "Value" : "'$IP_ADDRESS'"
+                "Value"         : "'$IP_ADDRESS'"
             }]
         }
         }]
+    }
+    done
     
