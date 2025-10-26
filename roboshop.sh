@@ -20,7 +20,7 @@ do
     echo "$i: $IP_ADDRESS"
     
     #create Route53 record make sure you delete existing record
-    aws route53 change-resource -record -record-sets \
+    aws route53 change-resource-record-record-sets \
     --hosted-zone-id $ZONE_ID \
     --change-batch '
     {
@@ -29,7 +29,7 @@ do
         ,"Action"               : ""CREATE"
         ,"Resource Recordset"   :{
             "Name"              : "'$!'.'$DOMAIN_NAME'"
-            "Type"              : "A"
+            ,"Type"             : "A"
             ,"TTL"              : 1
             ,"Resource Records" : [{
                 "Value"         : "'$IP_ADDRESS'"
@@ -37,5 +37,6 @@ do
         }
         }]
     }
+        "
     done
     
