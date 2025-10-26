@@ -26,8 +26,8 @@ do
     {
         "Comment":"creating a record set for cognito endpoint"
         ,"Changes":[{
-        ,"Action"               : ""CREATE"
-        ,"Resource Recordset"   :{
+        ,"Action"             : "CREATE"
+        ,"Resource Recordset" : {
             "Name"              : "'$!'.'$DOMAIN_NAME'"
             ,"Type"             : "A"
             ,"TTL"              : 1
